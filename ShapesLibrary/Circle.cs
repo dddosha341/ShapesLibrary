@@ -16,7 +16,7 @@
 
             set 
             {
-                if (_radius <= 0)
+                if (value <= 0)
                     throw new ArgumentException("Radius can`t be zero or negative");
 
                 _radius = value;
@@ -31,13 +31,14 @@
 
         public Circle(double radius) : base(radius) 
         { 
-
+            this.Radius = radius;
         }
         #endregion
 
         #region Methods
         public override double Area()
         {
+
             return _radius * _radius * Math.PI;
         }
         #endregion
